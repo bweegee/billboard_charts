@@ -1,6 +1,6 @@
-<h1>Edit Zoo</h1>
+<h1>Edit <%= @artist.name %></h1>
 
-<%= render "form", zoo: @zoo %>
+<%= render "form", artist: @artist %>
 
-<%= link_to "Show", zoo_path(@zoo) %> |
-<%= link_to "Back", zoos_path %>
+<%= link_to "Show", artist_path(@artist) %> |
+<%= link_to "Back", artist_path %>

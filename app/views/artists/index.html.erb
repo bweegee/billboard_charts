@@ -1,11 +1,16 @@
 <h1>Artists</h1>
 <% @artists.each do |artist| %>
-  <div> 
-    <h1>@artist.name</h1>
-    <div>
-      <%= link_to 'Show', artist_path(artist) %>
-      <%= link_to 'Edit', edit_artist_path(artist) %>
+  <div class="ui segments">
+  	<div class="ui center aligned segment">
+    <h2><%= artist.name %></h2>
+  	</div>
+  	<div class="artist-segment">
+    <div class="ui inverted segment" >
+      <%= link_to 'Show', artist_path(artist) %> |
+      <%= link_to 'Edit', edit_artist_path(artist) %> |
       <%= link_to 'Destroy', artist_path(artist), method: :delete %>
+    </div>
+    </div>
   </div>
 <% end %>
 <br />
