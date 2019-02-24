@@ -1,4 +1,9 @@
-.artist-segment {
-	background-color: #383636;
+#gradient {
+	background:
+			linear-gradient(red, transparent),
+			linear-gradient(to top left, lime, transparent),
+			linear-gradient(to top right, blue, transparent);
+	background-blend-mode: screen;
+	text-align: center;
+	padding-top: 23px;
 }
-

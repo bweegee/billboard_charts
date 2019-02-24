@@ -3,10 +3,12 @@
     <%= f.label :name %>
     <%= f.text_field :name, required: true, placeholder: "Name" %>
   </div>
+
   <div class="field">
-    <%= f.label :pic %>
-    <%= f.text_field :pic, placeholder: "pic" %>
+    <%= f.label :image %>
+    <%= f.file_field :image, required: true %>
   </div>
+
 <button class="ui primary button">
   Save
 </button>
