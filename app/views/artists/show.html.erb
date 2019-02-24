@@ -1,2 +1,28 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<div class="ui segments">
+  <div class="artist-bg">
+   <p<img class="ui medium circular image" src=""></p>
+   <h1><%= @artist.name %></h1>
+  </div>
+  <div class="ui inverted segment" >
+   <%= link_to 'Edit', edit_artist_path(@artist) %> |
+   <%= link_to 'Destroy', artist_path(@artist), method: :delete %>
+  </div>
+</div>
+
+<%# <h1>Artists</h1> %>
+<%# <% @artists.each do |artist| %1> %>
+<%#   <div class="ui segments"> %>
+<%#   	<div class="ui center aligned segment"> %>
+<%#     <h2><%= artist.name %1></h2> %>
+<%#   	</div> %>
+<%#     <div class="ui inverted segment" > %>
+<%#       <%= link_to 'Show', artist_path(artist) %1> | %>
+<%#       <%= link_to 'Edit', edit_artist_path(artist) %1> | %>
+<%#       <%= link_to 'Destroy', artist_path(artist), method: :delete %1> %>
+<%#     </div> %>
+<%#     </div> %>
+<%#   </div> %>
+<%# <% end %1> %>
+<%# <br /> %>
+<%# <%= link_to 'New Artist', new_artist_path %1> %>
+
