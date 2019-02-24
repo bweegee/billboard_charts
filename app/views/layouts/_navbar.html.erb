@@ -1,8 +1,4 @@
 <div class="ui inverted menu">
-  <div class="header item">
-    <%= image_tag(billboard_logo.svg) %>
-  </div>
-  <a class="item">
-    <%= link_to 'Artists', artists_path %>
-  </a>
+    <%= inline_svg "billboard_logo.svg", class: 'acitve item', id: 'logo' %>
+    <%= link_to 'Artists', artists_path, class: 'item' %>
 </div>
