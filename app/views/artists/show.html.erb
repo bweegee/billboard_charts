@@ -3,7 +3,7 @@
       <div class="ui small circular image">
         <%= image_tag(@artist.image) %>
       </div>
-      <h1><%= @artist.name %></h1>
+      <h1 class="artist-header"><%= @artist.name %></h1>
   </div>
   <div class="ui inverted segment" >
    <%= link_to 'Edit', edit_artist_path(@artist) %> |
