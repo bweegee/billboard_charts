@@ -10,4 +10,4 @@
    <%= link_to 'Destroy', artist_path(@artist), method: :delete %>
   </div>
 </div>
-
+<%= link_to 'Add Song', new_artist_song_path([@artist, @song]) %>

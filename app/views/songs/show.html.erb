@@ -1,2 +1,30 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+<div class="ui segments">
+  <div id="gradient">
+      <div class="ui small circular image">
+        <%= image_tag(@artist.image) %>
+      </div>
+      <h1 class="artist-header"><%= @artist.name %></h1>
+  </div>
+  <div class="ui inverted segment" >
+<div class="ui labeled button" tabindex="0">
+  <div class="ui red button">
+    <i class="heart icon"></i> Like
+  </div>
+  <a class="ui basic red left pointing label">
+    666
+  </a>
+</div>
+  </div>
+</div>
+<div class="ui raised segments">
+  <div class="ui very padded segment">
+    <h2><%= @song.title %></h2>
+  </div>
+  <div class="ui segment">
+    <%= link_to 'Edit', edit_artist_song_path([@artist, @song]) %> |
+    <%= link_to 'Destroy', [@artist, @song], method: :delete %>
+  </div>
+</div>
+<p>some billboard stuffs to be added</p>
+<br />
+<%= link_to 'Back', artist_songs_path(@artist) %>

@@ -1,2 +1,23 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<div class="ui segments">
+  <div id="gradient">
+      <div class="ui small circular image">
+        <%= image_tag(@artist.image) %>
+      </div>
+      <h1 class="artist-header"><%= @artist.name %></h1>
+  </div>
+  <div class="ui inverted segment" >
+    <h1>Songs</h1>
+  </div>
+</div>
+<%= link_to 'Add Song', new_artist_song_path([@artist, @song]) %>
+<%# <%= link_to 'Edit', edit_artist_song_path([@artist, @song]) %1> | %>
+<%# <%= link_to 'Destroy', [@artist, @song], method: :delete %1> | %>
+<%# <%= link_to 'Back', artist_songs_path(@artist) %1> %>
+
+<% @songs.each do |song| %>
+<div class="ui raised segments">
+  <div class="ui very padded segment">
+    <h4><%= link_to song.title, [@artist, song] %></h4>
+  </div>
+</div>
+<% end %>

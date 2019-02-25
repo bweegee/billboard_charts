@@ -1,7 +1,20 @@
+body {
+	margin: 0px;
+}
+
 #gradient {
-	// background-image: url("<%= image_tag url_for(artist.image) %>");
+	// background-image: url("url_for(@artist.image");
+
+/*	
+	background: 
+    repeating-radial-gradient(
+      circle at 0 0, 
+      #eee,
+      #ccc 50px
+			);
+*/			
 	background:
-			linear-gradient(45deg, black, #337b32, black);
+			linear-gradient(25deg, black 30%, #337b32, black);
 	background-blend-mode: screen;
 	text-align: center;
 	padding-top: 23px;
@@ -11,6 +24,6 @@
 	color: white;
 }
 
-a {
+.artist_links {
 	color: white;
 }

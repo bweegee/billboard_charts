@@ -8,9 +8,11 @@
     <h1 class="artist-header"><%= artist.name %></h1>
   </div>
     <div class="ui inverted segment">
-      <%= link_to 'Show', artist_path(artist) %> |
-      <%= link_to 'Edit', edit_artist_path(artist) %> |
-      <%= link_to 'Destroy', artist_path(artist), method: :delete %>
+      <div class="artist_links">
+        <%= link_to 'Songs', artist_songs_path(artist) %> |
+        <%= link_to 'Edit', edit_artist_path(artist) %> |
+        <%= link_to 'Destroy', artist_path(artist), method: :delete %>
+      </div>
     </div>
 </div>
 <% end %>
