@@ -1,19 +1,33 @@
 <h6>Signed in as <%= current_user.email %> <%= button_to "Log Out", destroy_user_session_path, method: :delete %></h6>
 <h1>Billboard Charts</h1>
-<% @billboards.each do |billboard| %>
-  <div class="ui segments">
-    <div class="gradient">
-      <h1 class="chart-header"><%= billboard.chart %></h1>
-    </div>
-    <div class="ui segment">
-      <div class="chart-links">
-        <%= link_to 'Show', billboard_path(billboard) %> |
-        <%= link_to 'Edit', edit_billboard_path(billboard) %> |
-        <%= link_to 'Destroy', billboard_path(billboard), method: :delete %>
-      </div>
-    </div>
-  </div>
-<% end %>
-<br />
-<%= link_to 'New Billboard chart', new_billboard_path %>
+<hr />
+<%= link_to "Add Billboard", new_billboard_path %>
+<h3>Your Billboard Charts</h3>
+<ul>
+  <% @billboards.each do |b| %>
+    <li>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
+
+<%# <% @billboards.each do |billboard| %1> %>
+<%#   <div class="ui segments"> %>
+<%#     <div class="gradient"> %>
+<%#       <h1 class="chart-header"><%= billboard.chart %1></h1> %>
+<%#     </div> %>
+<%#     <div class="ui segment"> %>
+<%#       <div class="chart-links"> %>
+<%#         <%= link_to 'Show', billboard_path(billboard) %1> | %>
+<%#         <%= link_to 'Edit', edit_billboard_path(billboard) %1> | %>
+<%#         <%= link_to 'Destroy', billboard_path(billboard), method: :delete %1> %>
+<%#       </div> %>
+<%#     </div> %>
+<%#   </div> %>
+<%# <% end %1> %>
+<%# <br /> %>
+<%# <%= link_to 'New Billboard chart', new_billboard_path %1> %>
 
