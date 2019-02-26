@@ -41,6 +41,9 @@ gem 'semantic-ui-sass'
 # to display billboard_logo.svg
 gem 'inline_svg'
 
+# for user support
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
