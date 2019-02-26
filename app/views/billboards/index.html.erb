@@ -1,0 +1,18 @@
+<h1>Billboard Charts</h1>
+<% @billboards.each do |billboard| %>
+  <div class="ui segments">
+    <div class="gradient">
+      <h1 class="chart-header"><%= billboard.chart %></h1>
+    </div>
+    <div class="ui segment">
+      <div class="chart-links">
+        <%= link_to 'Show', billboard_path(billboard) %> |
+        <%= link_to 'Edit', edit_billboard_path(billboard) %> |
+        <%= link_to 'Destroy', billboard_path(billboard), method: :delete %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<br />
+<%= link_to 'New Billboard chart', new_billboard_path %>
+
